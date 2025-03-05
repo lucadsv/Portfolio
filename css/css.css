@@ -89,6 +89,23 @@ nav ul li a:hover {
     list-style: disc;
 }
 
+.datepresentation {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.presentation a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
 footer {
     background: #333;
     color: white;
@@ -97,4 +114,74 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.formationdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 50px auto;
+}
+
+.formation {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50%;
+}
+
+.formation h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.formation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.formation ul li {
+    margin: 20px 0;
+}
+
+.saintemariediv,
+.iutvelizydiv {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.saintemariediv img,
+.iutvelizydiv img {
+    width: 130px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.saintemariediv h2,
+.iutvelizydiv h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.saintemariediv p,
+.iutvelizydiv p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.saintemariediv ul {
+    list-style: none;
+    padding: 0;
+}
+
+.saintemariediv ul li {
+    font-size: 16px;
+    margin: 5px 0;
 }
