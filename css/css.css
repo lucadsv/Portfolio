@@ -185,3 +185,40 @@ footer {
     font-size: 16px;
     margin: 5px 0;
 }
+
+.competencesdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 50px auto;
+}
+
+.competences {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+}
+
+.competences h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.competences ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competences ul li {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 18px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
