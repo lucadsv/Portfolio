@@ -6,30 +6,51 @@
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-image: url("../photos/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
     line-height: 1.6;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
 }
 
 nav {
-    background: #333;
-    color: #fff;
-    padding: 15px;
+    background: transparent;
+    padding: 5vh;
     display: flex;
     align-items: center;
 }
 
 .photoprofil img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid white;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 80px;
     justify-content: center;
     flex-grow: 1;
 }
@@ -39,80 +60,142 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 8px 12px;
-    transition: 0.3s;
+    padding: 12px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
 }
 
 nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
+    background-color: rgb(35,35,35);
+    border-radius: 15px;
+}
+
+.accueil {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 600px;
+}
+
+.accueil h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.accueil h2 {
+    font-size: 24px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.accueil p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgb(35,35,35);
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: rgb(65,65,65);
 }
 
 .presentation {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: auto;
-    margin: 120px auto;
-    width: 30%;
-    background: white;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    margin: 120px auto;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.presentation:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .photopresentation img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     margin-bottom: 20px;
-    border: 3px solid #333;
 }
 
 .presentation h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .presentation ul {
     list-style: none;
     font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.presentation ul li {
+    margin: 8px 0;
+    opacity: 0.9;
 }
 
 .presentation ul ul {
+    margin-top: 5px;
+    list-style: none;
     margin-left: 20px;
-    list-style: disc;
-}
-
-.datepresentation {
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    width: 100%;
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 .presentation a {
-    color: #333;
+    color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
+.presentation a:hover {
+    text-decoration: underline;
+}
+
+.datepresentation {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
     width: 100%;
 }
 
@@ -121,21 +204,28 @@ footer {
     justify-content: center;
     align-items: center;
     height: auto;
-    margin: 50px auto;
+    width: 100%;
+    margin: 120px auto;
 }
 
 .formation {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 50%;
+    color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 .formation h1 {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .formation ul {
@@ -144,28 +234,36 @@ footer {
 }
 
 .formation ul li {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .saintemariediv,
 .iutvelizydiv {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.saintemariediv:hover,
+.iutvelizydiv:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .saintemariediv img,
 .iutvelizydiv img {
-    width: 130px;
+    width: 150px;
     height: auto;
     margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .saintemariediv h2,
 .iutvelizydiv h2 {
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -174,15 +272,17 @@ footer {
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: bold;
+    opacity: 0.9;
 }
 
 .saintemariediv ul {
     list-style: none;
     padding: 0;
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 .saintemariediv ul li {
-    font-size: 16px;
     margin: 5px 0;
 }
 
@@ -191,21 +291,27 @@ footer {
     justify-content: center;
     align-items: center;
     height: auto;
-    margin: 50px auto;
+    width: 100%;
+    margin: 120px auto;
 }
 
 .competences {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 60%;
+    width: 50%;
+    color: white;
 }
 
 .competences h1 {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .competences ul {
@@ -214,11 +320,79 @@ footer {
 }
 
 .competences ul li {
-    background: #f9f9f9;
+    background: rgba(255, 255, 255, 0.2);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin: 10px 0;
     font-size: 18px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;
+    opacity: 0.9;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.competences ul li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+}
+
+.passionsdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 120px auto;
+}
+
+.passions {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 70%;
+    color: white;
+}
+
+.passions h1 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.subpassion {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.passion-item {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.passion-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.passion-item img:hover {
+    transform: scale(1.05);
+}
+
+.passion-item h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
